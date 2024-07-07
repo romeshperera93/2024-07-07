@@ -10,20 +10,43 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous">
     </head>
-    <style>
 
-</style>
     <body>
-        <h1 class="text-center bg-black text-white p-3 mb-3 fw-bolder">All
-            Countries</h1>
-        <div class="container vh-100">
-            <table class="table table-dark tbl" id="tblCountries" border="1">
-
-            </table>
+        <div class="container m-2 bg-secondary-subtle p-1">
+            <div class="d-flex" role="search">
+                <input id="txtInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" onclick="searchCountry()">Search</button>
+                
+                <button class="btn btn-outline-success" type="submit" onclick="searchCountry()">cancel</button>
+            </div>
         </div>
 
-        
+        <div class="container">
+            <div class="row">
+                <img class="img-thumbnail"  id="flagImg" src="" alt="flag">
+                <h1 id="name">Name</h1>
+                <p id="officialName">Official Name </p>
+                <p id="region">Region</p>
+                <p id="population">Population </p>
+            </div>
+        </div>
+
+
     
+
+        <h1 class="text-center bg-secondary-subtle fw-bolder">All Countries</h1>
+        <div class="container">
+            <div class="row">
+                <div class="vh-100">
+                    <table class="table table-secondary tbl" id="tblCountries"
+                        border="2"></table>
+           </div>
+                  <div id="card-row" class="row">
+                </div>
+             </div>
+
+        </div>-
+
         <script src="app.js"></script>
     </body>
 </html>
